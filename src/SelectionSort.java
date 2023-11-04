@@ -19,11 +19,13 @@ public class SelectionSort {
 
             for(int j = i + 1; j < length; j++){
                 if(arr[j] < arr[minimo]){minimo = j;}
+                countI = countI + 1;
             }
             aux = arr[minimo];
             arr[minimo] = arr[i];
             arr[i] = aux;
             countT = countT + 1;
+            countI = countI + 1;
         }
     return arr;
     }
@@ -35,5 +37,6 @@ public class SelectionSort {
         }
         System.out.println();
         System.out.println("Numero de trocas: " + countT);
+        System.out.println("Numero de iteracoes: " + countI);
     }
 }

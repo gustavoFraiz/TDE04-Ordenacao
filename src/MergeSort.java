@@ -22,9 +22,12 @@ public class MergeSort {
         }
 
         mergeSort(arrEsquerda, pivo);
+        countI = countI + 1;
         mergeSort(arrDireita, length - pivo);
+        countI = countI + 1;
 
         merge(arr, arrEsquerda, arrDireita, pivo, length - pivo);
+        countI = countI + 1;
     }
 
     public void merge(int[]arr, int[]arrEsquerda, int[]arrDireita, int tamanhoEsquerda, int tamanhoDireita){
@@ -40,14 +43,17 @@ public class MergeSort {
                 arr[k++] = arrDireita[j++];
                 countT = countT + 1;
             }
+            countI = countI + 1;
         }
         while(i < tamanhoEsquerda){
             arr[k++] = arrEsquerda[i++];
             countT = countT + 1;
+            countI = countI + 1;
         }
         while(j < tamanhoDireita){
             arr[k++] = arrDireita[j++];
             countT = countT + 1;
+            countI = countI + 1;
         }
 
     }
@@ -59,6 +65,7 @@ public class MergeSort {
         }
         System.out.println();
         System.out.println("Numero de trocas: " + countT);
+        System.out.println("Numero de iteracoes: " + countI);
     }
 
 }

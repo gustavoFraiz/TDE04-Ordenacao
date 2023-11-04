@@ -23,7 +23,9 @@ public class BubbleSort {
                     array[j + 1] = aux;
                     countT = countT + 1;
                 }
+                countI = countI+ 1;
             }
+            countI = countI + 1;
         }
         return array;
     }
@@ -35,6 +37,7 @@ public class BubbleSort {
         }
         System.out.println();
         System.out.println("Numero de trocas: " + countT);
+        System.out.println("Numero de iteracoes: " + countI);
     }
 
 

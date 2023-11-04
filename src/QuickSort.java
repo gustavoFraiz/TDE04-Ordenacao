@@ -11,7 +11,9 @@ public class QuickSort {
             int index = particao(arr, comeco, fim);
 
             quickSort(arr, comeco, index - 1);
+            countI = countI + 1;
             quickSort(arr, index+1, fim);
+            countI = countI + 1;
         }
 
         return arr;
@@ -30,6 +32,7 @@ public class QuickSort {
                 arr[j] = aux;
                 countT = countT + 1;
             }
+            countI = countI + 1;
         }
 
         aux = arr[i + 1];
@@ -48,5 +51,6 @@ public class QuickSort {
         }
         System.out.println();
         System.out.println("Numero de trocas: " + countT);
+        System.out.println("Numero de iteracoes: " + countI);
     }
 }
