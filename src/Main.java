@@ -7,9 +7,13 @@ public class Main {
 //        int array[] = sort.sort(arr);
 //        sort.print(array);
 
-        MergeSort sort = new MergeSort();
+//        MergeSort sort = new MergeSort();
+//
+//        sort.mergeSort(arr, arr.length);
+//        sort.print(arr, arr.length);
+        QuickSort sort = new QuickSort();
 
-        sort.mergeSort(arr, arr.length);
+        sort.quickSort(arr, 0, arr.length - 1);
         sort.print(arr, arr.length);
 
     }
