@@ -1,7 +1,14 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
-        int arr[] = {21,141,12,14,5,123,44,5,521,24,1};
+        long seed = 1231315414;
+        Random random = new Random(seed);
+        int[] arr = new int[10000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(); // storing random integers in an array
+        }
+
         BubbleSort bubble = new BubbleSort();
         SelectionSort selection = new SelectionSort();
         MergeSort merge = new MergeSort();
